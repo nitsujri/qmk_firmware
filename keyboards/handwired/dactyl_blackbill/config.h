@@ -45,9 +45,9 @@
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 30
 #define RGBLED_SPLIT {15,15}
-#define RGBLIGHT_HUE_STEP 8
-#define RGBLIGHT_SAT_STEP 8
-#define RGBLIGHT_VAL_STEP 8
+#define RGBLIGHT_HUE_STEP 10
+#define RGBLIGHT_SAT_STEP 17
+#define RGBLIGHT_VAL_STEP 17
 #define RGBLIGHT_LIMIT_VAL 200 /* The maximum brightness level */
 #define RGBLIGHT_SLEEP  /* If defined, the RGB lighting will be switched off when the host goes to sleep */
 /*== all animations enable ==*/
