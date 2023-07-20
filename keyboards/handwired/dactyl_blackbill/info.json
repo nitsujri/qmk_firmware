@@ -1,0 +1,13 @@
+{
+    "maintainer": "duy do",
+    "manufacturer": "duy do",
+    "keyboard_name": "dactyl",
+    "usb": {
+        "vid": "0x444D",
+        "pid": "0x3536",
+        "device_version": "0.0.1"
+    },
+    "processor": "STM32F401",
+    "bootloader": "stm32-dfu",
+    "board": "BLACKPILL_STM32_F401"
+}
