@@ -17,16 +17,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(3), KC_Z  , KC_X  , KC_C  , KC_V  , KC_B  ,                         KC_N  , KC_M  ,KC_COMM,KC_DOT ,KC_SLSH,KC_MINUS,
                          MO(2),KC_TAB,                                                       KC_ENT, MO(2),
                                          KC_LSFT,KC_SPC,                        KC_BSPC, MO(1),
-                                         MO(1),KC_LGUI,                         KC_LGUI,  KC_RSFT,
-                                         KC_LALT, KC_LALT,                        KC_LCTL, KC_ENT
+                                         LM(2, MOD_LGUI),KC_LGUI,                         KC_ENT,  KC_RSFT,
+                                         KC_LCTL, KC_LALT,                        KC_LCTL, KC_LALT
     ),
 
     [_LOWER] = LAYOUT_5x6(
         KC_TILD,KC_EXLM, KC_AT ,KC_HASH,KC_DLR ,KC_PERC,                        KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RPRN,_______,
         _______,_______,_______,_______,_______,_______,                        KC_LBRC, KC_RBRC , LSFT(KC_LBRC) , LSFT(KC_RBRC) ,_______,_______,
         _______,KC_LSFT,KC_LCTL,KC_LALT,KC_LGUI ,_______,                        KC_LEFT, KC_DOWN , KC_UP , KC_RIGHT ,KC_MINS,_______,
-        _______,LGUI(KC_GRV),LGUI(KC_TILD),_______,_______,_______,                        KC_C, _______ , _______ , _______ ,_______ ,_______,
-                                                _______,LSFT(KC_TAB),            _______, _______,
+        _______,_______,_______,_______,_______,_______,                        KC_C, _______ , _______ , _______ ,_______ ,_______,
+                                                _______,_______,            _______, _______,
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______,
                                                 _______,_______,            _______,_______
@@ -35,15 +35,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_RAISE] = LAYOUT_5x6(
           KC_F12 , KC_F1 , KC_F2 , KC_F3 , KC_F4 , KC_F5 ,                        KC_F6  , KC_F7 , KC_F8 , KC_F9 ,KC_F10 ,KC_F11 ,
-          _______,_______,_______,_______,_______,KC_MUTE,                        _______,_______,_______,_______ ,_______,_______,
-          _______,KC_MPRV,KC_MPLY  ,KC_MNXT,_______,KC_VOLU,                        KC_END,KC_PGDN,KC_PGUP,KC_HOME,_______,_______,
-          _______,_______,_______,_______,_______,KC_VOLD,                        _______,_______,_______,_______,_______,_______,
+          _______,_______,_______,_______,_______,_______,                        _______,_______,_______,_______,_______,_______,
+          _______,KC_GRV,KC_TILD,LSFT(KC_TAB),KC_TAB,_______,                        KC_END,KC_PGDN,KC_PGUP,KC_HOME,_______,_______,
+          _______,_______,_______,_______,_______,_______,                        _______,_______,_______,_______,_______,_______,
                                                   _______,_______,            _______ ,_______,
-                                                  _______,_______,            _______,_______,
-                                                  _______,_______,            _______,_______,
-                                                  _______,_______,            _______,_______
+                                                  _______,_______,            KC_MPLY,_______,
+                                                  _______,_______,            KC_VOLU,_______,
+                                                  _______,_______,            KC_VOLD,_______
     ),
- [3] = LAYOUT_5x6(QK_BOOT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_F1,KC_F2,KC_F3,KC_F4,KC_F5,KC_TRANSPARENT,KC_TRANSPARENT,AP_FN,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_F9,KC_F5,KC_F10,KC_F11,KC_F12,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT,KC_TRANSPARENT)
+ [3] = LAYOUT_5x6(
+    QK_BOOT,_______,_______,_______,_______,_______,                            _______,_______,_______,_______,_______,_______,
+    _______,_______,_______,_______,_______,_______,                            KC_F1,KC_F2,KC_F3,KC_F4,KC_F5,_______,
+    _______,AP_FN,_______,_______,_______,_______,                              KC_F9,KC_F5,KC_F10,KC_F11,KC_F12,_______,
+    _______,_______,_______,_______,_______,_______,                            LGUI(LCTL(KC_BSLS)),LALT(LSFT(KC_E)),LGUI(LSFT(KC_Y)),_______,_______,_______,
+                                                    _______,_______,        _______,_______,
+                                                    _______,_______,        _______,_______,
+                                                    _______,_______,        _______,_______,
+                                                    _______,_______,        _______,_______
+),
 };
 
 
