@@ -7,7 +7,7 @@ BOOTLOADER = stm32-dfu
 #   change yes to no to disable
 #
 BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
-MOUSEKEY_ENABLE = yes       # Mouse keys
+MOUSEKEY_ENABLE = no       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
@@ -27,3 +27,12 @@ VIA_ENABLE = yes
 SPLIT_TRANSPORT = serial_usart
 # RGB_MATRIX_ENABLE = yes
 # RGB_MATRIX_DRIVER = WS2812
+
+
+# Colors
+
+RGBLIGHT_SPLIT = yes
+RGBLIGHT_MODE_RAINBOW_SWIRL=5
+RGBLIGHT_MODE_BREATHING=2
+RGBLIGHT_EFFECT_RAINBOW_SWIRL=yes
+RGBLIGHT_DEFAULT_HUE=168

@@ -7,7 +7,6 @@ qmk json2c -o keyboards/unikeyboard/diverge3/keymaps/nitsujri/keymap.c keyboards
 
 - Manually modify keymap.c to add `AP_FN`
 
-`qmk compile -kb unikeyboard/diverge3 -km nitsujri`
-`qmk flash -kb unikeyboard/diverge3 -km nitsujri`
+`qmk compile -kb unikeyboard/diverge3 -km nitsujri; qmk flash -kb unikeyboard/diverge3 -km nitsujri`
 
 Plugin to help modify keys: KeymapCEditor
