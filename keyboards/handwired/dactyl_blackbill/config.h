@@ -29,6 +29,7 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
+#define DYNAMIC_KEYMAP_LAYER_COUNT 7
 
 #define HAL_USE_SERIAL TRUE
 // #define SPLIT_HAND_PIN B9
@@ -39,6 +40,8 @@
 // #define SPLIT_USB_DETECT
 #define MASTER_LEFT
 // #define MASTER_RIGHT
+
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
 
 // WS2812 RGB LED strip input and number of LEDs
 #define WS2812_DI_PIN B9
@@ -53,7 +56,7 @@
     #define RGBLIGHT_SLEEP 1 /* If defined, the RGB lighting will be switched off when the host goes to sleep */
     #define RGBLIGHT_DEFAULT_HUE 180
     #define RGBLIGHT_DEFAULT_SAT 255
-    #define RGBLIGHT_DEFAULT_VAL 150
+    #define RGBLIGHT_DEFAULT_VAL 40
 
     /*== or choose animations ==*/
     #    define RGBLIGHT_EFFECT_BREATHING
@@ -65,7 +68,7 @@
     #    define RGBLIGHT_EFFECT_STATIC_GRADIENT
     #    define RGBLIGHT_EFFECT_RGB_TEST
     #    define RGBLIGHT_EFFECT_ALTERNATING
-    // #    define RGBLIGHT_EFFECT_TWINKLE
+    #    define RGBLIGHT_EFFECT_TWINKLE
     /*== customize breathing effect ==
     */
     /*==== (DEFAULT) use fixed table instead of exp() and sin() ====*/
@@ -73,44 +76,7 @@
     /*==== use exp() and sin() ====*/
     //#    define RGBLIGHT_EFFECT_BREATHE_CENTER 1.85  // 1 to 2.7
     //#    define RGBLIGHT_EFFECT_BREATHE_MAX    255   // 0 to 255
+    # define RGBLIGHT_RAINBOW_SWIRL_RANGE 20
 
-    #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL + 2
+    #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL + 5
 #endif
-
-// #ifdef RGB_MATRIX_ENABLE
-// #define DRIVER_LED_TOTAL 82
-// #define RGB_MATRIX_SPLIT { 41, 41 }
-// #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 170 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
-// #define RGB_MATRIX_HUE_STEP 8
-// #define RGB_MATRIX_SAT_STEP 8
-// #define RGB_MATRIX_VAL_STEP 8
-// #define ENABLE_RGB_MATRIX_ALPHAS_MODS
-// #define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
-// #define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
-// #define ENABLE_RGB_MATRIX_BREATHING
-// #define ENABLE_RGB_MATRIX_BAND_SAT
-// #define ENABLE_RGB_MATRIX_BAND_VAL
-// #define ENABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
-// #define ENABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
-// #define ENABLE_RGB_MATRIX_BAND_SPIRAL_SAT
-// #define ENABLE_RGB_MATRIX_BAND_SPIRAL_VAL
-// #define ENABLE_RGB_MATRIX_CYCLE_ALL
-// #define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
-// #define ENABLE_RGB_MATRIX_CYCLE_UP_DOWN
-// #define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
-// #define ENABLE_RGB_MATRIX_CYCLE_OUT_IN
-// #define ENABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
-// #define ENABLE_RGB_MATRIX_CYCLE_PINWHEEL
-// #define ENABLE_RGB_MATRIX_CYCLE_SPIRAL
-// #define ENABLE_RGB_MATRIX_DUAL_BEACON
-// #define ENABLE_RGB_MATRIX_RAINBOW_BEACON
-// #define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
-// #define ENABLE_RGB_MATRIX_RAINDROPS
-// #define ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
-// #define ENABLE_RGB_MATRIX_HUE_BREATHING
-// #define ENABLE_RGB_MATRIX_HUE_PENDULUM
-// #define ENABLE_RGB_MATRIX_HUE_WAVE
-// #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
-// #define ENABLE_RGB_MATRIX_PIXEL_FLOW
-// #define ENABLE_RGB_MATRIX_PIXEL_RAIN
-// #endif
